@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 import json
 import os
-from osgeo import gdal
+
 
 from pathlib import Path
 
@@ -29,7 +29,7 @@ data = json.load(f)
 SECRET_KEY = data['SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = data['ALLOWED_HOSTS']
 
@@ -189,7 +189,8 @@ STATIC_ROOT = os.path.join(str(BASE_DIR), 'staticfiles')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 #GDAL_LIBRARY_PATH = '/opt/homebrew/Cellar/gdal/3.7.2_1/lib/libgdal.33.3.7.2.dylib'
-# GDAL_LIBRARY_PATH = '/opt/homebrew/Cellar/gdal/3.7.2_1/lib/libgdal.dylib'
+#GDAL_LIBRARY_PATH = '/opt/homebrew/Cellar/gdal/3.7.2_1/lib/libgdal.dylib'
+#GDAL_LIBRARY_PATH = '/Users/mukeshpabbathi/miniconda3/lib/libgdal.32.3.6.2.dylib'
 # GEOS_LIBRARY_PATH ='/opt/homebrew/Cellar/geos/3.12.0/lib/libgeos_c.dylib'
 
 
