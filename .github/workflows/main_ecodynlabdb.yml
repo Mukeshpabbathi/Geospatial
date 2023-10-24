@@ -19,12 +19,10 @@ jobs:
         with:
           python-version: 3.11
       - name: Install GDAL Dependencies
-        run: sudo apt-get install -y libgdal-dev
-
-
-      - name: Create and activate virtual environment
         run: |
+          sudo apt-get install -y libgdal-dev
           source venv/bin/activate
+          pip install GDAL==3.4.3 
 
       - name: Install dependencies
         run: pip install -r requirements.txt
